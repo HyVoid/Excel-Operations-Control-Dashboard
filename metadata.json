@@ -1,0 +1,6 @@
+{
+  "name": "Excel Operations Control Dashboard",
+  "description": "An interactive, client-side SaaS operational workbook and financial control dashboard that replicates Excel workbook operations including transport rate matrix lookups, provider settlements, cash tracking, and business analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

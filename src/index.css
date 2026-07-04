@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #051C2C;
+  --color-accent: #2251FF;
+  --color-bg: #F5F5F2;
+  --color-muted: #888888;
+  --color-body-text: #1A1A2E;
+  --color-positive: #00C853;
+  --color-negative: #D32F2F;
+  --color-surface: #FFFFFF;
+  --color-input-bg: #FFFDE7;
+  --color-border: #E8E8E6;
+
+  --font-heading: 'EB Garamond', 'Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  /* Core Palette */
+  --color-primary: #051C2C;
+  --color-accent: #2251FF;
+  --color-bg: #F5F5F2;
+  --color-muted: #888888;
+  --color-body-text: #1A1A2E;
+  --color-positive: #00C853;
+  --color-negative: #D32F2F;
+  --color-surface: #FFFFFF;
+  --color-input-bg: #FFFDE7;
+  --color-border: #E8E8E6;
+
+  /* Fonts */
+  --font-heading: 'EB Garamond', 'Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Elevation Shadows (Clean Minimalism Soft Shadow) */
+  --shadow-sm: 0 1px 2px rgba(5, 28, 44, 0.02), 0 2px 4px rgba(5, 28, 44, 0.03);
+  --shadow-md: 0 4px 12px rgba(5, 28, 44, 0.05);
+  --shadow-lg: 0 8px 24px rgba(5, 28, 44, 0.08);
+  --shadow-nav: 0 1px 0px rgba(5, 28, 44, 0.05), 0 1px 2px rgba(5, 28, 44, 0.02);
+
+  /* Radius System */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --ease-standard: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1.0);
+  --ease-decel: cubic-bezier(0.0, 0.0, 0.2, 1.0);
+}
+
+/* Global Reset and Body Styling */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-body-text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Typography styles */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.serif-title {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+}
+
+/* Card Styling conforming to Clean Minimalism */
+.card, .interactive-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.22s ease-out, box-shadow 0.22s ease-out;
+}
+
+.card:hover, .interactive-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+}
+
+/* Editable cells */
+.editable {
+  background-color: var(--color-input-bg);
+  cursor: text;
+}
+
+/* Data bar elements */
+.data-bar-bg {
+  height: 6px;
+  background: rgba(34, 81, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.data-bar-fill {
+  height: 100%;
+  background: var(--color-accent);
+}
+
+/* Active navigation tabs styling */
+.tab-active {
+  border-bottom: 2px solid var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Insight boxes (Apple left-border style) */
+.insight-box {
+  border-left: 3px solid var(--color-accent);
+  background: rgba(5, 28, 44, 0.04);
+}
+
+/* Badges / Pill elements */
+.pill {
+  border-radius: 9999px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Data Table elements */
+.data-table {
+  font-size: 13px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-header {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-bg);
+}
+
+/* Base fadeUp page entry animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 220ms ease-out forwards;
+}
+
+.btn-pressable {
+  transition: transform 150ms var(--ease-standard), opacity 150ms var(--ease-standard);
+}
+
+.btn-pressable:active {
+  transform: scale(0.97);
+}
+
+.cell-hover-expand {
+  transition: transform 150ms var(--ease-spring), filter 150ms var(--ease-standard);
+}
+
+.cell-hover-expand:hover {
+  transform: scale(1.04);
+  filter: brightness(1.05);
+}
+
+/* Custom Scrollbar for clean tabular layout */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(5, 28, 44, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(5, 28, 44, 0.3);
+}
