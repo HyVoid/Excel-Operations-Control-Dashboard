@@ -8,7 +8,7 @@
 
 > ## **No signup. No installation. Free.**
 >
-> 🌐 **Open in Browser** → *HTML version available via GitHub Pages*
+> 🌐 **Open in Browser** → [HTML version](https://hyvoid.github.io/Excel-Operations-Control-Dashboard/)
 >
 > 📥 **Download Excel** → *Excel workbook available via Releases/Gumroad*
 >
