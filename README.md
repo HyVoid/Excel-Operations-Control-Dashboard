@@ -16,22 +16,6 @@
 
 ---
 
-## Screenshots
-
-### Browser Version
-
-<!-- screenshot: browser version -->
-
-*Interactive operational control dashboard showing live cash exposure, settlement status, and profitability.*
-
-### Excel Version
-
-<!-- screenshot: excel version -->
-
-*Single-source operational ledger with automatic settlement, cash tracking, and financial analysis.*
-
----
-
 ## What It Helps You Track
 
 * Customer revenue, provider costs, transport costs, and company margin — at the individual order level.
